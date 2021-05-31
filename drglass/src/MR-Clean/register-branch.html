@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title>Mr-Clean</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="img/logo_100.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/ef9b0108c9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .nav-item{
+                list-style-type: none;
+                display: inline-block;
+            }
+            li{
+                list-style-type: none;
+            }
+            a{
+                text-decoration: none;
+                color: #646464;
+            }
+            .sidepanel  {
+                width: 0;
+                position: fixed;
+                z-index: 3;
+                height: 100vh;
+                top: 0;
+                right: 0;
+                background-color: #303030;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+                border-bottom-left-radius: 30px;
+            }
+
+            .sidepanel a {
+                padding: 8px 50px;
+                text-decoration: none;
+                font-size: 20px;
+                color: #0174CF;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidepanel a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidepanel .closebtn {
+                position: absolute;
+                top: 0;
+                left: 25px;
+                font-size: 36px;
+            }
+            .openbtn{
+                color: #0174CF;
+            }
+            .openbtn:hover {
+                background-color:#0174CF;
+                color: white;
+            }
+            .social{
+                display: inline-block !important;
+                padding: 8px !important;
+                color: white !important; 
+                font-size: xx-large !important;
+            }
+            @media screen and (max-width: 992px) {
+                .nav-hide-element{
+                    display: none !important;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-light">
+        <!-- side bar -->
+        <div id="mySidepanel" class="sidepanel text-right">
+            <a href="javascript:void(0)" class="closebtn px-2" onclick="closeNav()">×</a>
+            <h3 class="px-4 pt-4 pb-2" style="color: white;">الصفحة الرئيسية</h3>
+            <h4 class="px-4" style="color: white;"> تسجيل </h4>
+            <a href="#">تسجيل دخول </a>
+            <a href="#">تسجيل مستخدم جديد</a>
+            <a href="#">تسجيل شركة </a>
+            <a href="#">تسجيل فرع</a>
+            <br>
+            <hr class="bg-light w-75">
+            <div class="text-center">
+                <a href="#" class="social"><i class="fab fa-instagram p-3"></i></a>
+                <a href="#" class="social"><i class="fab fa-whatsapp p-3"></i></a>
+                <a href="#" class="social"><i class="fab fa-facebook-f p-3"></i></a>
+            </div>
+          </div>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand navbar-light bg-light " dir="ltr" style="font-size: larger;">
+            <div class="float-left">
+                <a class="navbar-brand"><img src="img/logo_100.png" style="width:50px"></a>
+            </div>
+            <div class="float-right w-100 text-right">
+                
+                <ul dir="rtl" class="m-0 d-inline-block pr-0 nav-hide-element">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html" style="border-bottom:2px solid #0174CF ;">الصفحة الرئيسية</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html?#service">عن الخدمة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html?#appointments">مواعيد الخدمة المتاحة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html?#subscriptions">باقات الاسعار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html?#we">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html?#contact">اتصل بنا</a>
+                    </li>
+                </ul>
+                <button class="btn openbtn" onclick="openNav()"><i class="fas fa-bars" style="font-size: xx-large;"></i></button>
+            </div>
+        </nav>
+        <!-- login div -->
+        <div class="text-center">
+            <h1 class="py-4"><spsn class="py-2" style="border-bottom: 2px solid #0174CF; color: #0174CF;">تسجيل فرع</spsn></h1>
+            <div class="container-md container-fluid mt-3 mb-5">
+                <div class="row ">
+                    <div class="col-md-1"></div>
+                    <div class="col-12 col-md-10 shadow overflow-hidden" style="background-color: #0174CF; border-radius: 30px;">
+                        <div class="row">
+                            <div class="col-3 col-md-2 pr-0 my-auto">
+                                <a href="#">
+                                    <div style="border-radius: 40px 0 0 40px; background-color: #55ACF1; width: 70%;">
+                                        <img src="img/user.svg" style="width: 40px; padding: 2.5rem 0;">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div style="border-radius: 40px 0 0 40px; background-color: #55ACF1; width: 70%;">
+                                        <img src="img/add-friend.svg" style="width: 40px; padding: 2.5rem 0;">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div style="border-radius: 40px 0 0 40px; background-color: #55ACF1; width: 70%;">
+                                        <img src="img/business-and-trade.svg" style="width: 40px; padding: 2.5rem 0;">
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="w-100 bg-light" style="border-radius: 40px 0 0 40px;">
+                                        <img src="img/business-center.svg" style="width: 50px; padding: 2.5rem 0;">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-9 col-md-10 text-light my-auto px-sm-5 text-right " >
+                                <form>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-2 pr-5" style="font-size: x-large;"> اسم الفرع </div>
+                                        <div class="col-sm-8 m-auto py-2 "><input type="text" class="form-control w-75 m-auto" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-2 pr-5" style="font-size: x-large;"> كود الفرع </div>
+                                        <div class="col-sm-8 m-auto py-2 "><input type="text" class="form-control w-75 m-auto" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-2 pr-5" style="font-size: x-large;"> رقم الهاتف </div>
+                                        <div class="col-sm-8 m-auto py-2 "><input type="number" class="form-control w-75 m-auto" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-2 pr-5" style="font-size: x-large;"> العنوان </div>
+                                        <div class="col-sm-8 m-auto py-2 "><input type="text" class="form-control w-75 m-auto" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-2 pr-5" style="font-size: x-large;"> الشخص المسئول </div>
+                                        <div class="col-sm-8 m-auto py-2 "><input type="text" class="form-control w-75 m-auto" required></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4"></div>
+                                        <div class="col-sm-8 m-auto py-2 ">
+                                            <div class="w-75 m-auto">
+                                                <input class="form-check-input check" type="checkbox" id="exampleCheck1" required>
+                                                <label class="form-check-label mr-5 py-2" for="exampleCheck1">اوافق علي <a href="#" class="text-warning"> الشروط والاحكام</a></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-sm-4 py-3"></div>
+                                        <div class="col-sm-8 m-auto py-3">
+                                            <div class="m-auto text-left" style="width: 75%;">
+                                                <input class="btn px-3 pb-2 pt-0 w-50" type="submit" value="تسجيل" style="background-color: white; color: #0174CF; border-radius: 10px; font-size: x-large;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "300px";
+        }
+            function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+</html>

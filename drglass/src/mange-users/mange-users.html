@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title>Mr-Clean</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="img/logo_100.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/ef9b0108c9.js" crossorigin="anonymous"></script>
+        <script src="dataTables.min.js"></script>
+        <script src="dataTables.bootstrap4.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            table{
+                width:100%;
+            }
+            label {
+                display: inline-flex;
+                margin-bottom: .7rem;
+                margin-top: .7rem;
+                width: 70%;
+            }
+        </style>
+    </head>
+    <body class="bg-light">
+        <!-- side bar -->
+        <div id="mySidepanel" class="sidepanel text-right panel">
+            <a href="javascript:void(0)" class="closebtn px-2" onclick="closeNav()">×</a>
+            <a href="#"> الصفحة الرئيسية </a>
+            <a href="#"> لوحة التحكم المدير </a>
+            <a href="#"> إدارة الموقع </a>
+            <a href="#"> بياناتي </a>
+            <a href="#" class="text-blue"> إدارة المستخدمين </a>
+            <a href="#"> إدارة الشركة </a>
+            <a href="#"> إدارة الاشتراكات </a>
+            <a href="#"> إدارة الباقات </a>
+            <a href="#"> الرسائل </a>
+            <a href="#"> إدارة مواعيد العمل </a>
+            <a href="#"> إدارة طرق الدفع </a>
+            <br>
+            <hr class="bg-light w-75">
+            <div class="text-center">
+                <button class=" btn text-light mb-3 logbtn" href="#">تسجيل الخروج</span></button><br>
+                <button class=" btn userbtn bg-white text-blue"> Admin <i class="fas fa-user"></i></button>
+            </div>
+        </div>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand navbar-light px-3 py-0 text-center bg-blue" dir="ltr" style="font-size: larger;">
+            <div class="float-left">
+                <a class="navbar-brand"><img src="img/LOGO_WHITE_100.png" class="w-100"></a>
+            </div>
+            <div class="float-right w-100 text-right">
+                <ul dir="rtl" class="m-0 d-inline-block pr-0 nav-hide-element">
+                    <li class="nav-item active">
+                        <a class="nav-link btn text-light logbtn" href="#" >تسجيل الخروج</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn userbtn bg-white text-blue"> Admin <i class="fas fa-user"></i></a>
+                    </li>
+                </ul>
+                <button class="btn text-light" onclick="openNav()"><i class="fas fa-bars" style="font-size: xx-large;"></i></button>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <div class="container-fluid my-5 text-center text-blue">
+            <h2><span class="pb-1 border-buttom" > إدارة المستخدمين </span></h2>
+                <div class="px-md-5 px-0 mt-5 overflow-auto">
+                        <table id="example" class="table table-striped table-bordered  mx-auto shadow" style="width:85%">
+                            <thead class="bg-blue text-white" style="font-size: larger;">
+                                <tr>
+                                    <th style="min-width: 165px;">التحكم</th>
+                                    <th >اسم المستخدم</th>
+                                    <th >البريد الالكتروني</th>
+                                    <th >الموبايل</th>
+                                    <th >اسم الشركة</th>
+                                    <th >اضافة للجديد</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01241133812</td>
+                                    <td>Crew</td>
+                                    <td class="pt-3">
+                                        <i class="far fa-eye-slash text-blue" style="font-size: x-large; cursor: pointer;"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>asd</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td class="pt-3">
+                                        <i class="far fa-eye text-blue" style="font-size: x-large; cursor: pointer;"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>ahmed</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تعديل"><i class="fas fa-edit"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="عرض"><i class="far fa-eye"></i></button>
+                                        <button type="button" class="btn bg-blue text-white" title="حذف"><i class="fas fa-trash-alt"></i></button>
+                                    </td>
+                                    <td>Tiger Nixon</td>
+                                    <td>Tiger@gmail.com</td>
+                                    <td>01141133812</td>
+                                    <td>Crew</td>
+                                    <td>
+                                        <button type="button" class="btn bg-blue text-white" title="تحديد كمقروء"><i class="far fa-eye"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="bg-blue text-white" style="font-size: larger;">
+                                <tr>
+                                    <th >التحكم</th>
+                                    <th >اسم المستخدم</th>
+                                    <th >البريد الالكتروني</th>
+                                    <th >الموبايل</th>
+                                    <th >اسم الشركة</th>
+                                    <th >اضافة للجديد</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                </div>
+        </div>
+
+
+    </body>
+   <script>
+       function openNav() {
+           document.getElementById("mySidepanel").style.width = "300px";
+       }
+           function closeNav() {
+           document.getElementById("mySidepanel").style.width = "0";
+       }
+   </script>
+   <script>
+       $(document).ready(function() {
+            $('#example').DataTable(
+                {     
+            "aLengthMenu": [[5, 10, 25, -1], [5, 10, 25, "All"]],
+                "iDisplayLength": 5
+            } 
+                );
+        } );
+   </script>
+</html>
